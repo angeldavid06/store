@@ -2,7 +2,7 @@
     require_once 'models/almacen/clasificaciones.php';
     require_once 'routes/web.php';
 
-    class clasificacionController{
+    class clasificacionController {
         public $model;
         public $web;
 
@@ -11,7 +11,7 @@
             $this->web = new Web();
         }
 
-        public function mostrar(){
+        public function mostrar() {
             $tablas =  $this->model->mostrarTabla('clasificaciones');
             $this->web->View('almacen/clasificaciones',$tablas);
         }

@@ -6,7 +6,7 @@
                 'localhost',
                 'root',
                 '',
-                'videojuegos'
+                'db_videojuegos'
             );
             return $this->conectar;
         }
