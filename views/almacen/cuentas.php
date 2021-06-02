@@ -1,6 +1,6 @@
 <?php require_once 'public/components/almacen/menu.php'; ?>
 
-<form action="http://localhost/videojuegos_v2/v2/?controller=cuentasController&action=ingresar" method="post">
+<form action="http://localhost/store/?controller=cuentasController&action=ingresar" method="post">
     <label for="abonado">abonado</label>
     <input type="text" name="abonado" id="abonado">
     <label for="restante">restante</label>
@@ -18,5 +18,5 @@
     <p><?=$cuenta->monto_restante;?></p>
     <p><?=$cuenta->monto_total;?></p>
     <p><?=$cuenta->id_desarrolladora;?></p>
-    <a href="http://localhost/videojuegos_v2/v2/?controller=cuentasController&action=eliminar&id=<?=$cuenta->id;?>">X</a>
+    <a href="http://localhost/store/?controller=cuentasController&action=eliminar&id=<?=$cuenta->id;?>">X</a>
 <?php endwhile; ?>

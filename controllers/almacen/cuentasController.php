@@ -23,7 +23,7 @@
             $this->model->setIdDesarrolladora($_POST['desarrolladora']);
             $resultado = $this->model->ingresar();
             if ($resultado) {
-                header("Location: http://localhost/videojuegos_v2/v2/?controller=cuentasController&action=mostrar");
+                header("Location: http://localhost/store/?controller=cuentasController&action=mostrar");
             } else {
                 echo 'error';
             }
@@ -33,7 +33,7 @@
             $this->model->setId($_GET['id']);
             $resultado = $this->model->eliminar();
             if ($resultado) {
-                header("Location: http://localhost/videojuegos_v2/v2/?controller=cuentasController&action=mostrar");
+                header("Location: http://localhost/store/?controller=cuentasController&action=mostrar");
             } else {
                 echo 'error';
             }

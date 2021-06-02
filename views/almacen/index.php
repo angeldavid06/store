@@ -1,7 +1,7 @@
 <?php require_once 'public/components/almacen/menu.php'; ?>
 <h1>Juegos</h1>
 
-<form action="http://localhost/videojuegosv2/v2/?controller=juegosController&action=registrar" method="post">
+<form action="http://localhost/store/?controller=juegosController&action=registrar" method="post">
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre" id="nombre">
     <label for="descripcion">Descripción</label>
@@ -23,6 +23,6 @@
     <td><?=$producto->nombre?></td>
     <td><?=$producto->descripcion?></td>
     <td><?=$producto->precio?></td>
-    <td><a href="http://localhost/videojuegosv2/v2/?controller=juegosController&action=eliminar&id=<?=$producto->id?>">X</a></td>
+    <td><a href="http://localhost/store/?controller=juegosController&action=eliminar&id=<?=$producto->id?>">X</a></td>
 </tr>
 <?php endwhile;?> 

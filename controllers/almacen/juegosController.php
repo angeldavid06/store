@@ -27,7 +27,7 @@
             $resultado = $this->model->registrar();
 
             if ($resultado) {
-                header("Location: http://localhost/videojuegos_v2/v2/?controller=juegosController&action=mostrar");
+                header("Location: http://localhost/store/?controller=juegosController&action=mostrar");
             }else{
                 echo "Valio";
             }
@@ -38,7 +38,7 @@
             $resultado = $this->model->eliminar();
 
             if ($resultado) {
-                header("Location: http://localhost/videojuegos_v2/v2/?controller=juegosController&action=mostrar");
+                header("Location: http://localhost/store/?controller=juegosController&action=mostrar");
             }else{
                 echo "Valio";
             }

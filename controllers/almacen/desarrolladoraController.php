@@ -21,7 +21,7 @@
             $this->model->setTelefono($_POST['telefono']);
             $resultado = $this->model->insertar();
             if ($resultado) {
-                header("Location: http://localhost/videojuegos_v2/v2/?controller=desarrolladoraController&action=mostrar");                
+                header("Location: http://localhost/store/?controller=desarrolladoraController&action=mostrar");                
             } else {
                 echo "No me voy a tomar esos miados. Elmo dijo moka";
             }      
@@ -31,12 +31,10 @@
             $this->model->setId($_GET['id']);
             $resultado = $this->model->eliminar();
             if ($resultado) {
-                header("Location: http://localhost/videojuegos_v2/v2/?controller=desarrolladoraController&action=mostrar");
+                header("Location: http://localhost/store/?controller=desarrolladoraController&action=mostrar");
             }else{
                 echo "Fallo payaso";
             }
         }
     }
-    
-
 ?>
