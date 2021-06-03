@@ -1,21 +1,7 @@
 <?php 
-
-     class Administrador(){
-
-       
-
-
-
-
-
+     class Administrador
+     {
+          
      }
-
-
-
-
-
-
-
-
-
+     
 ?>
