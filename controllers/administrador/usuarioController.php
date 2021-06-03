@@ -12,15 +12,20 @@
            }
 
            public function mostrar(){
-            $tablas= $this->model->mostrarTabla('usuarios');
-            $this->web->View('administrador/usuario',$tablas);
-
+                $tablas= $this->model->mostrarTabla('usuarios');
+                $this->web->View('administrador/usuario',$tablas);
            }
 
            public function ingresar(){
-               //$this->model->set
-
-
+               $this->model->setNombre($_POST['usuario']);
+               $this->model->setContrasenia($_POST['contrasenia']);
+               $this->model->setIdEmpleado(1);
+               $resultado = $this->model->ingresar();
+               if ($resultado) {
+                   header("Location: http://localhost/store/");
+               } else {
+                   echo 'Error';
+               }
            }
 
            public function eliminar(){

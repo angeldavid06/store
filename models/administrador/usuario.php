@@ -11,7 +11,7 @@
            parent::__construct();
         }
 
-        public function setNombre($nomre):void{
+        public function setNombre($nombre):void{
             $this->nombre=$nombre;
         }
 
@@ -34,7 +34,6 @@
         public function getIdEmpleado(){
             return $this->id_empleado;
         }
-
 
         public function ingresar(){
             $password=password_hash($this->contrasenia,PASSWORD_DEFAULT,['cost'=>10]);
