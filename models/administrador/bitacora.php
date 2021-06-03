@@ -5,7 +5,6 @@
     class bitacora extends base
     {   
 
-
         public $id;
         public $tabla;
         public $asunto;
