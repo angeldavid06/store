@@ -12,5 +12,11 @@
             $mostrar = $this->db->query($sql);
             return $mostrar;
         }
+
+        public function insert($tabla,$columnas,$valores) {
+            $sql = "INSERT INTO $tabla($columnas) VALUES ($valores)";
+            $insert = $this->db->query($sql);
+            return $insert;
+        }
     }
 ?>
