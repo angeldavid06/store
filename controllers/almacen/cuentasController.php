@@ -13,7 +13,7 @@
 
         public function mostrar () {
             $tablas = $this->model->mostrarTabla('cuentas_pagar');
-            $this->web->View('almacen/cuentas',$tablas);
+            $this->web->View('almacen/cuenta',$tablas);
         }
 
         public function ingresar () {

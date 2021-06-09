@@ -7,6 +7,7 @@
         public $monto_restante;
         public $monto_total;
         public $id_desarrolladora;
+        public $base;
 
         public function __construct () { parent::__construct(); }
 
@@ -31,13 +32,20 @@
         public function getIdDesarrolladora () { return $this->id_desarrolladora; }
 
         public function ingresar () {
-            $sql = "INSERT INTO cuentas_pagar(monto_abonado,monto_restante,monto_total,id_desarrolladora) VALUES (
-                '$this->monto_abonado',
-                '$this->monto_restante',
-                '$this->monto_total',
-                '$this->id_desarrolladora'
-            )";
-            $resultado = mysqli_query($this->db, $sql);
+            $tabla = 'cuentas_pagar';
+            $columnas = 'monto_abonado,monto_restante,monto_total,id_desarrolladora';
+            $valores = "'$this->monto_abonado',
+                        '$this->monto_restante',
+                        '$this->monto_total',
+                        '$this->id_desarrolladora'";
+            $resultado = $this->insert($tabla,$columnas,$valores);
+            // $sql = "INSERT INTO cuentas_pagar(monto_abonado,monto_restante,monto_total,id_desarrolladora) VALUES (
+            //     '$this->monto_abonado',
+            //     '$this->monto_restante',
+            //     '$this->monto_total',
+            //     '$this->id_desarrolladora'
+            // )";
+            // $resultado = mysqli_query($this->db, $sql);
             return $resultado;
         }
         
